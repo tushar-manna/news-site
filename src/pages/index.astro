@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const allNews = await getCollection('news');
+const sortedNews = allNews.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const featuredArticle = sortedNews.find(article => article.data.featured) || sortedNews[0];
+const otherArticles = sortedNews.filter(article => article.slug !== featuredArticle.slug);
+---
+
+<Layout title="Home">
+	<Hero 
+    title={featuredArticle.data.title}
+    excerpt={featuredArticle.data.excerpt}
+    image={featuredArticle.data.image}
+    slug={featuredArticle.slug}
+    category={featuredArticle.data.category}
+  />
+
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="news-grid">
+      {otherArticles.map(article => (
+        <ArticleCard
+          title={article.data.title}
+          excerpt={article.data.excerpt}
+          image={article.data.image}
+          slug={article.slug}
+          date={article.data.publishDate}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+</style>
