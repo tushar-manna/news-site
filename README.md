@@ -46,3 +46,9 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 
 you can modify the site according to your branding by modifying /src/config/site.ts 
+
+To implement google analytics apply the below .env pattern
+
+```
+PUBLIC_GA_ID=your google analytics ID
+```
