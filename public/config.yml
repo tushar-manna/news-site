@@ -1,0 +1,27 @@
+#these below configs were according to decap cms docs
+
+backend:
+  name: github
+  repo: tushar-manna/news-site
+
+
+
+
+media_folder: "src/asstets/news"
+
+
+collections:
+  - name: "news" 
+    label: "News"
+    folder: "src/content/news" 
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "news" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true}
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -2,7 +2,7 @@
 title: "The Renaissance of Digital Art"
 excerpt: "How blockchain and VR are creating new marketplaces and mediums for artists around the globe."
 publishDate: 2023-10-10
-image: "art.jpeg"
+image: "/src/assets/news/art.jpeg"
 category: "Culture"
 featured: false
 ---

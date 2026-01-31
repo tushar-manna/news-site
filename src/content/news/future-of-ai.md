@@ -2,7 +2,7 @@
 title: "The Future of AI: Beyond the Hype"
 excerpt: "As artificial intelligence continues to evolve, experts weigh in on what the next decade holds for machine learning and human-computer interaction."
 publishDate: 2023-10-25
-image: "ai.jpeg"
+image: "/src/assets/news/ai.jpeg"
 category: "Technology"
 featured: true
 ---

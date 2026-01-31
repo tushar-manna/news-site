@@ -2,7 +2,7 @@
 title: "Mars Mission: A New Era of Space Exploration"
 excerpt: "NASA announces ambitious new timeline for the first manned mission to the Red Planet, sparking excitement in the scientific community."
 publishDate: 2023-10-20
-image: "mars.jpeg"
+image: "/src/assets/news/mars.jpeg"
 category: "Science"
 featured: false
 ---

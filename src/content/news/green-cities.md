@@ -2,7 +2,7 @@
 title: "Green Cities: The Rise of Vertical Forests"
 excerpt: "Urban planners are turning to nature-inspired designs to combat pollution and improve mental health in densely populated cities."
 publishDate: 2023-10-15
-image: "green.jpg"
+image: "/src/assets/news/green.jpg"
 category: "Environment"
 featured: false
 ---

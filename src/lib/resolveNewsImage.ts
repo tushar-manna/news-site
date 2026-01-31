@@ -1,8 +1,7 @@
 //image helper function
 const images = import.meta.glob<{default: ImageMetadata;}>('/src/assets/news/*.{jpeg,jpg,png,gif}');
 
-export async function resolveNewsImage(filename: string) {
-  const path = `/src/assets/news/${filename}`
+export async function resolveNewsImage(path: string) {
   const img = images[path];
 
   if (!img) {
